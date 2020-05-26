@@ -8,7 +8,7 @@ using TRobles.OA.C.Entities;
 
 namespace TRobles.OA.C.Service
 {
-  public interface IUserServise
+  public interface IUserService
     {
         Task<User> Autheticate(string userName, string password);
         Task<IEnumerable<User>> Get();

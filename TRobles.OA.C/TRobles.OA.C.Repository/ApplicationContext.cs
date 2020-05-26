@@ -49,7 +49,7 @@ namespace TRobles.OA.C.Repository
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=TROAC;Trusted_Connection=True;");
+           //  optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=TROAC;Trusted_Connection=True;");
         }
     }
 }

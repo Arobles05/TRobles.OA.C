@@ -10,7 +10,7 @@ using TRobles.OA.C.Entities;
 
 namespace TRobles.OA.C.Service
 {
-    public class UserService : IUserServise
+    public class UserService : IUserService
     {
         private readonly IRepository<User> _repository;
         public UserService(IRepository<User> repository)
