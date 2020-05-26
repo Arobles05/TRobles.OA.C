@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TRobles.OA.C.Common", "..\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRobles.OA.C.Repository", "TRobles.OA.C.Repository\TRobles.OA.C.Repository.csproj", "{8708AD6A-D3FE-43A1-9DDF-D98543C563AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRobles.OA.C.Service", "TRobles.OA.C.Service\TRobles.OA.C.Service.csproj", "{D9B1274F-8093-4BEF-AEB9-BD5485DA6180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8708AD6A-D3FE-43A1-9DDF-D98543C563AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8708AD6A-D3FE-43A1-9DDF-D98543C563AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8708AD6A-D3FE-43A1-9DDF-D98543C563AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B1274F-8093-4BEF-AEB9-BD5485DA6180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B1274F-8093-4BEF-AEB9-BD5485DA6180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B1274F-8093-4BEF-AEB9-BD5485DA6180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B1274F-8093-4BEF-AEB9-BD5485DA6180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{996FD195-3C5F-4688-AB09-E4D51BA31C0B} = {C55B78B2-3CAC-45CF-AFDB-392D2B0CD674}
 		{0B9A88E5-3E1D-481E-8B5A-6A46E69B937A} = {C55B78B2-3CAC-45CF-AFDB-392D2B0CD674}
 		{8708AD6A-D3FE-43A1-9DDF-D98543C563AD} = {06041DD0-445F-4171-9ED3-5D1B337F768C}
+		{D9B1274F-8093-4BEF-AEB9-BD5485DA6180} = {D510931A-F0F1-4A01-9FDE-EE2F5E4CC5D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AB3F5AE-3C7A-4163-AF37-BBFC8D615984}
