@@ -94,7 +94,8 @@ namespace TRobles.OA.C.Common.ImplementRepos
                 var entitySaved = await  _entity.AddAsync(entity);
                 if(entitySaved!= null) { 
                     created = true;
-                   _unitOfWork.Commit();
+                    _unitOfWork.Save();
+                   //_unitOfWork.Commit();
                 }
 
             }

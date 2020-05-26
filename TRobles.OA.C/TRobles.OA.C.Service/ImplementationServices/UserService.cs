@@ -47,9 +47,9 @@ namespace TRobles.OA.C.Service
             return await _repository.GetPredicateAsync(whereCondition, orderBy, includeProperties);
         }
 
-        public async void Insert(User user)
+        public async Task<bool> Insert(User user)
         {
-          var inserted = await  _repository.InsertAsync(user);
+          return await  _repository.InsertAsync(user);
         }
 
         public  void Update(User user)

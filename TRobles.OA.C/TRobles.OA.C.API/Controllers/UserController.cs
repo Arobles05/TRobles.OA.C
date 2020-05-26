@@ -25,5 +25,11 @@ namespace TRobles.OA.C.API.Controllers
         {
            return await _userService.Get();
         }
+        [HttpPost]
+        [Route("create")]
+        public  Task<bool> create(string email,string userName,string password)
+        {
+            return _userService.Insert(new User() { Email = email, Password = password, UserName = userName, CreatedById = Guid.NewGuid(), CreatedDate = DateTime.Now });
+        }
     }
 }

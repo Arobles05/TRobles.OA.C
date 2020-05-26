@@ -16,7 +16,7 @@ namespace TRobles.OA.C.Service
         Task<IEnumerable<User>> Get(Expression<Func<User, bool>> whereCondition = null,
                            Func<IQueryable<User>, IOrderedQueryable<User>> orderBy = null,
                            string includeProperties = "");
-        void Insert(User user);
+        Task<bool> Insert(User user);
         void Update(User user);
         void Delete(long id);
     }
