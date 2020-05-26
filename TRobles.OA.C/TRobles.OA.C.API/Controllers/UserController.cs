@@ -21,15 +21,29 @@ namespace TRobles.OA.C.API.Controllers
 
         [HttpGet]
         [Route("get")]
-        public async Task<IEnumerable<User>> get()
+        public async Task<IEnumerable<User>> Get()
         {
            return await _userService.Get();
         }
         [HttpPost]
         [Route("create")]
-        public  Task<bool> create(string email,string userName,string password)
+        public  Task<bool> Create(string email,string userName,string password)
         {
             return _userService.Insert(new User() { Email = email, Password = password, UserName = userName, CreatedById = Guid.NewGuid(), CreatedDate = DateTime.Now });
+        }
+
+        [HttpPost]
+        [Route("edit")]
+        public void Update(long id, string email, string userName, string password)
+        {
+            var user = _userService.Get(id).Result;
+            if(user != null)
+            {
+                user.Email = email;
+                user.UserName = userName;
+                user.Password = password;
+                _userService.Update(user);
+            }
         }
     }
 }

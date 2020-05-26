@@ -33,7 +33,8 @@ namespace TRobles.OA.C.Common.ImplementRepos
                 if(objectInDb != null)
                 {
                     _entity.Remove(objectInDb);
-                    _unitOfWork.Commit();
+                    _unitOfWork.Save();
+                    //_unitOfWork.Commit();
                 }
             }
             catch (DbEntityValidationException dbEx)
@@ -124,7 +125,8 @@ namespace TRobles.OA.C.Common.ImplementRepos
                 }
                 var entityAttached =   _entity.Attach(entity);
                 SetEntryModified(entity);
-                _unitOfWork.Commit();
+                _unitOfWork.Save();
+                //_unitOfWork.Commit();
             }
             catch (DbEntityValidationException dbEx)
             {
