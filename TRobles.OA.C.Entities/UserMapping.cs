@@ -9,10 +9,21 @@ namespace TRobles.OA.C.Entities
     {
         public UserMapping(EntityTypeBuilder<User> entityTypeBuilder)
         {
-            entityTypeBuilder.HasKey(t => t.Id);
+            entityTypeBuilder.HasKey(t => t.Id );
             entityTypeBuilder.Property(t => t.UserName).IsRequired();
             entityTypeBuilder.Property(t => t.Password).IsRequired();
-            entityTypeBuilder.Property(t => t.Email).IsRequired();
+            entityTypeBuilder.HasOne<Role>(r => r.Role);
+            
+            //entityTypeBuilder.Property(t => t.Email).IsRequired();
+        }
+    }
+
+    public class RoleMapping
+    {
+        public RoleMapping(EntityTypeBuilder<Role> entityTypeBuilder)
+        {
+            entityTypeBuilder.HasKey(t => t.Id);
+            entityTypeBuilder.HasMany<User>(e => e.Users);
         }
     }
 }

@@ -27,21 +27,21 @@ namespace TRobles.OA.C.API.Controllers
         }
         [HttpPost]
         [Route("create")]
-        public  Task<bool> Create(string email,string userName,string password)
+        public  Task<bool> Create(User user)
         {
-            return _userService.Insert(new User() { Email = email, Password = password, UserName = userName, CreatedById = Guid.NewGuid(), CreatedDate = DateTime.Now });
+            user.Birthdate = DateTime.Now;
+            user.TransactionDate = DateTime.Now;
+            
+            return _userService.Insert(user);
         }
 
         [HttpPost]
         [Route("edit")]
-        public void Update(long id, string email, string userName, string password)
+        public void Update(User user)
         {
-            var user = _userService.Get(id).Result;
+            //var user = _userService.Get(id).Result;
             if(user != null)
             {
-                user.Email = email;
-                user.UserName = userName;
-                user.Password = password;
                 _userService.Update(user);
             }
         }
