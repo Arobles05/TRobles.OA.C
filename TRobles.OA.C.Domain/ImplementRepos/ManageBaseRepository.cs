@@ -10,7 +10,7 @@ using TRobles.OA.C.Common.Interfaces;
 
 namespace TRobles.OA.C.Common.ImplementRepos
 {
-    public class ManageBaseRepository<T, C> : IRepository<T> where T : class, new() where C : DbContext
+    public abstract class ManageBaseRepository<T, C> : IRepository<T> where T : class, new() where C : DbContext
     {
         private string _errorMessage;
         private bool _isDisposesd;
