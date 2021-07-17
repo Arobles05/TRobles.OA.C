@@ -9,18 +9,20 @@ namespace TRobles.OA.C.Repository
     public class ApplicationContext : DbContext
     {
         public DbSet<User> User { get; set; }
+        public DbSet<Role> Role { get; set; }
         public ApplicationContext()
         {
 
         }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-
+            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             new UserMapping(modelBuilder.Entity<User>());
+            
         }
 
         public override int SaveChanges()
@@ -49,6 +51,7 @@ namespace TRobles.OA.C.Repository
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
            //  optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=TROAC;Trusted_Connection=True;");
         }
     }
