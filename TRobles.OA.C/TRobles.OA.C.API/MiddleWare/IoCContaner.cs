@@ -11,14 +11,14 @@ using TRobles.OA.C.Service;
 namespace TRobles.OA.C.API.MiddleWare
 {
     public static class IoCContaner
-    { 
+    {
         public static IServiceCollection AddDependency(this IServiceCollection services)
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
             services.AddTransient<IUserService, UserService>();
-            services.AddTransient(IRoleService, RoleService)();
+            services.AddTransient<IRoleService, RoleService>();
             return services;
         }
     }
