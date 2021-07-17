@@ -18,6 +18,7 @@ namespace TRobles.OA.C.API.MiddleWare
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient(IRoleService, RoleService)();
             return services;
         }
     }
