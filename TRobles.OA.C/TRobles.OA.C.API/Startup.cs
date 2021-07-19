@@ -54,7 +54,7 @@ namespace TRobles.OA.C.API
                 options.UseSqlServer(connection);
             });
 
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(conexion.DefaultConnection));
+            services.AddDbContext<ApplicationContext>(options => options.UseLazyLoadingProxies().UseSqlServer(conexion.DefaultConnection));
 
             //Inyeccion de los servicion con el contenedor
             IoCContaner.AddDependency(services);
@@ -67,7 +67,7 @@ namespace TRobles.OA.C.API
             {
                 app.UseDeveloperExceptionPage();
             }
-         
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
