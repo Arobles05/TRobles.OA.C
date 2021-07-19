@@ -23,7 +23,7 @@ namespace TRobles.OA.C.Entities
         public RoleMapping(EntityTypeBuilder<Role> entityTypeBuilder)
         {
             entityTypeBuilder.HasKey(t => t.Id);
-            entityTypeBuilder.HasMany<User>(e => e.Users);
+           // entityTypeBuilder.HasMany<User>(e => e.Users);
         }
     }
 }

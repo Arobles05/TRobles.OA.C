@@ -24,7 +24,7 @@ namespace TRobles.OA.C.Entities
         [Column("TRANSACTION_DATE")]
         public DateTime TransactionDate { get; set; }
         
-        public virtual ICollection<User> Users { get; set; }
+       // public virtual ICollection<User> Users { get; set; }
 
     }
 }
